@@ -1,5 +1,6 @@
 package org.example;
 
+import java.io.File;
 import java.util.Scanner;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
@@ -7,8 +8,17 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("Welcome To Java");
+    Scanner input= new Scanner(System.in);
+        System.out.println("Enter The File Path :");
+        String filePath= input.next();
 
+        File f=new File(filePath);
+        if(!(f.exists()) && !(f.isDirectory())) {
+            System.out.println("Folder Not Found");
+        }
 
-    }
+        else{
+            System.out.println("Processing");
+        }
+   }
 }
