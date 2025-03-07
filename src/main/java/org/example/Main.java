@@ -10,16 +10,16 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Enter The File Path :");
-        String filePath = input.nextLine();
+        String userfilePath = input.nextLine();
 
-        File f = new File(filePath);
-        String [] isEmpty=f.list();
+        File userFolder = new File(userfilePath);
+        String [] folderContents=userFolder.list();
 
 
 
-        if (!(f.exists())) {
+        if (!(userFolder.exists())) {
             System.out.println("Folder does not exists");
-        } else if (isEmpty.length == 0) {
+        } else if (folderContents.length == 0) {
                 System.out.println("Folder is Empty");
             }
         else {
