@@ -19,11 +19,13 @@ public class Main {
 
         if (!(f.exists())) {
             System.out.println("Folder does not exists");
-        } else {
-            if (isEmpty != null && isEmpty.length == 0) {
-                System.out.println("Empty Folder");
+        } else if (isEmpty.length == 0) {
+                System.out.println("Folder is Empty");
             }
+        else {
+            System.out.println("Processing...");
+        }
+
         }
 
     }
-}
