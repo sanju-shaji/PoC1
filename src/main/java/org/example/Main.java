@@ -20,11 +20,8 @@ public class Main {
         if (!(f.exists())) {
             System.out.println("Folder does not exists");
         } else {
-            assert isEmpty != null;
-            if (isEmpty.length == 0) {
+            if (isEmpty != null && isEmpty.length == 0) {
                 System.out.println("Empty Folder");
-            } else {
-                System.out.println("processing");
             }
         }
 
