@@ -13,14 +13,19 @@ public class Main {
         String filePath = input.nextLine();
 
         File f = new File(filePath);
+        String [] isEmpty=f.list();
+
 
 
         if (!(f.exists())) {
             System.out.println("Folder does not exists");
-        } else if ((f.list()).length == 0) {
-            System.out.println("Empty Folder");
         } else {
-            System.out.println("processing");
+            assert isEmpty != null;
+            if (isEmpty.length == 0) {
+                System.out.println("Empty Folder");
+            } else {
+                System.out.println("processing");
+            }
         }
 
     }
