@@ -8,17 +8,20 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-    Scanner input= new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter The File Path :");
-        String filePath= input.next();
+        String filePath = input.nextLine();
 
-        File f=new File(filePath);
-        if(!(f.exists()) && !(f.isDirectory())) {
-            System.out.println("Folder Not Found");
+        File f = new File(filePath);
+
+
+        if (!(f.exists())) {
+            System.out.println("Folder does not exists");
+        } else if ((f.list()).length == 0) {
+            System.out.println("Empty Folder");
+        } else {
+            System.out.println("processing");
         }
 
-        else{
-            System.out.println("Processing");
-        }
-   }
+    }
 }
