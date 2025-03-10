@@ -19,8 +19,7 @@ public class LogAggregatorTool {
             return;
         }
         for (String files : folderContents) {
-            System.out.println(files);
-            if (!(files.endsWith(".txt"))) {
+            if (!(files.endsWith(".log"))) {
                 System.out.println(extensionchecker);
                 return;
             }
