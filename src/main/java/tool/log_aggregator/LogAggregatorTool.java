@@ -41,7 +41,7 @@ public class LogAggregatorTool {
         }
         System.out.println(TOTAL_FILE_COUNT + totalFilesCount);
         if(noInvalidFlag){
-        System.out.println(+nonLogFilesCount + SLASH + totalFilesCount + INVALID_LOG_FILES);}
+        System.out.println(nonLogFilesCount + SLASH + totalFilesCount + INVALID_LOG_FILES);}
         System.out.println(logFileCount + SLASH + totalFilesCount + VALID_LOG_FILES);
     }
 }
