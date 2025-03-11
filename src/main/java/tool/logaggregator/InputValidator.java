@@ -1,6 +1,7 @@
 package tool.logaggregator;
 
 import java.io.File;
+
 public class InputValidator {
     String userFilePath;
 
