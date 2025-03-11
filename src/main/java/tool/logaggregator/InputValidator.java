@@ -1,4 +1,4 @@
-package tool.log_aggregator;
+package tool.logaggregator;
 
 import java.io.File;
 import java.util.Arrays;

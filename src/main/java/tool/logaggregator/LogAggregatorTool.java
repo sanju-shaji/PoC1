@@ -1,4 +1,4 @@
-package tool.log_aggregator;
+package tool.logaggregator;
 
 public class LogAggregatorTool {
     public static void main(String[] args) {
