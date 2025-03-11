@@ -1,6 +1,10 @@
 package org.example;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.example.Strings.*;
 
@@ -20,8 +24,7 @@ public class LogAggregatorTool {
         }
         for (String files : folderContents) {
             if (!(files.endsWith(".log"))) {
-                System.out.println(extensionchecker);
-                return;
+                System.out.println(files + extensionchecker);
             }
         }
         System.out.println(processing);
