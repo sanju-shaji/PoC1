@@ -1,8 +1,6 @@
 package tool.logaggregator;
 
 import java.io.File;
-import java.util.Arrays;
-
 public class InputValidator {
     String userFilePath;
 
@@ -25,7 +23,7 @@ public class InputValidator {
         int logFileCount = 0;
         int nonLogFilesCount = 0;
         boolean noInvalidFlag = false;
-        long totalFilesCount = (Arrays.stream(folderContents).count());
+        long totalFilesCount = folderContents.length;
         for (String files : folderContents) {
             if ((files.endsWith(".log"))) {
                 logFileCount += 1;
