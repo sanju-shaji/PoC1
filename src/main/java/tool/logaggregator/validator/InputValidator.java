@@ -1,26 +1,40 @@
-package tool.logaggregator;
+package tool.logaggregator.validator;
+
+import tool.logaggregator.constants.LogAggregatorToolConstants;
 
 import java.io.File;
 
+//To validate the folder path which the user inputs
 public class InputValidator {
-    String userFilePath;
+    public String userFolderPath;
 
-    public InputValidator(String userFilePath) {
-        this.userFilePath = userFilePath;
+    public InputValidator(String userFolderPath) {
+        this.userFolderPath = userFolderPath;
     }
 
-    public void validateInput() {
-        File userFolder = new File(userFilePath);
-        String[] folderContents = userFolder.list();
+    //  To check if the user input path is a valid directory
+    public boolean checkValidDirectory(File userFolder) {
         if (!(userFolder.isDirectory())) {
             System.out.println(LogAggregatorToolConstants.INVALID_PATH);
-            return;
+            return false;
         }
-        if (folderContents.length == 0) {
+        return true;
+    }
+
+    //    To check if the user input path is empty or not
+    public boolean checkEmpty(File userFolder) {
+        if (userFolder.length() == 0) {
             System.out.println(LogAggregatorToolConstants.EMPTY_FOLDER);
-            return;
+            return false;
         }
+        return true;
+    }
+
+    //  To display the number of valid and invalid file and display processing
+    public void processingFileDetails() {
         System.out.println(LogAggregatorToolConstants.PROCESSING);
+        File userFolder = new File(userFolderPath);
+        String[] folderContents = userFolder.list();
         int logFileCount = 0;
         int nonLogFilesCount = 0;
         boolean noInvalidFlag = false;
@@ -28,11 +42,10 @@ public class InputValidator {
         for (String files : folderContents) {
             if ((files.endsWith(".log"))) {
                 logFileCount += 1;
-            } else {
-                if (!(files.endsWith(".log"))) {
-                    nonLogFilesCount += 1;
-                    noInvalidFlag = true;
-                }
+            }
+            if (!(files.endsWith(".log"))) {
+                nonLogFilesCount += 1;
+                noInvalidFlag = true;
             }
         }
         System.out.println(LogAggregatorToolConstants.TOTAL_FILE_COUNT + totalFilesCount);

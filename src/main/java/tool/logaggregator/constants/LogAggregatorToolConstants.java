@@ -1,4 +1,4 @@
-package tool.logaggregator;
+package tool.logaggregator.constants;
 
 public class LogAggregatorToolConstants {
     public static final String EMPTY_FOLDER = "Folder is empty";
