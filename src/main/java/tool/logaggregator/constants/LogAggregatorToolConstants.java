@@ -1,5 +1,8 @@
 package tool.logaggregator.constants;
 
+/**
+ * class to hold all the string constants
+ */
 public class LogAggregatorToolConstants {
     public static final String EMPTY_FOLDER = "Folder is empty";
     public static final String INVALID_LOG_FILES = " are invalid files";

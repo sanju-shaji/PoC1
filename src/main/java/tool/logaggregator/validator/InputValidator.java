@@ -9,9 +9,6 @@ import java.io.File;
 public class InputValidator {
     /**
      * menthod to check if user provides a folder path as an argument
-     *
-     * @param args
-     * @return
      */
     private boolean isCommandLineArgumentPresent(String[] args) {
         if (args.length == 0) {
@@ -23,9 +20,6 @@ public class InputValidator {
 
     /**
      * method to check if the user provided path is a directory or not
-     *
-     * @param args
-     * @return
      */
     private boolean isValidDirectory(String[] args) {
         String userFolderPath = args[0];
@@ -39,9 +33,6 @@ public class InputValidator {
 
     /**
      * Method to check if the user input path is empty or not
-     *
-     * @param args
-     * @return
      */
     private boolean isFolderEmpty(String[] args) {
         String userFolderPath = args[0];
@@ -55,8 +46,6 @@ public class InputValidator {
 
     /**
      * Method to display the number of valid and invalid file and display processing
-     *
-     * @param args
      */
     private void validateExtensions(String[] args) {
         String userFolderPath = args[0];
@@ -81,8 +70,6 @@ public class InputValidator {
 
     /**
      * validator method to run all the validation
-     *
-     * @param args
      */
     public void validate(String[] args) {
         if (!isCommandLineArgumentPresent(args)) {
