@@ -16,13 +16,12 @@ public class LogSorter {
     /**
      * Method to sort all logs based on date and time
      *
-     * @param args
      * @return sorted arraylist fileData
      */
-    public ArrayList sortFile(String[] args) {
+    public ArrayList sortLogFile(String userFilePath) {
         LogReader logReader = new LogReader();
         ArrayList<String> fileData;
-        fileData = logReader.readData(args);
+        fileData = logReader.readLogData(userFilePath);
         SimpleDateFormat dateFormat = new SimpleDateFormat(LogAggregatorToolConstants.SIMPLE_DATE_TIME_PATTERN);
         Collections.sort(fileData, new Comparator<String>() {
             @Override

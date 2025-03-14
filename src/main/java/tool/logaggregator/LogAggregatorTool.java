@@ -11,6 +11,6 @@ public class LogAggregatorTool {
         InputValidator inputValidator = new InputValidator();
         LogProcessor logProcessor = new LogProcessor();
         inputValidator.validate(args);
-        logProcessor.processFile(args);
+        logProcessor.processLogFile(args);
     }
 }

@@ -14,11 +14,10 @@ public class LogReader {
     /**
      * method for reading and merging all the log files
      *
-     * @param args :commandline argument
      * @return arraylist filedata which contains all the merged data
      */
-    public ArrayList readData(String[] args) {
-        String userFilePath = args[0];
+    public ArrayList readLogData(String userFilePath) {
+
         ArrayList<String> fileData = new ArrayList<>();
         File userFolder = new File(userFilePath);
         String[] folderContents = userFolder.list();
@@ -31,8 +30,8 @@ public class LogReader {
                     fileData.add(line);
                 }
             }
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        } catch (Exception exception) {
+            throw new RuntimeException(exception);
         }
         return fileData;
     }
