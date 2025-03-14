@@ -12,6 +12,7 @@ public class LogAggregatorToolConstants {
     public static final String NO_COMMAND_LINE_ARGUMENT = "Please provide folderpath as argument ";
     public static final String PROCESSING = "Processing...";
     public static final String SLASH = "\\";
+    public static final String SORTED_FILE_PATH = "Sorted File Path : ";
     public static final String TOTAL_FILE_COUNT = "Total number file in the specified Folder : ";
     public static final String VALID_LOG_FILES = " are valid files";
 }

@@ -26,7 +26,7 @@ public class LogProcessor {
             } else {
                 sucess = true;
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS);
-                System.out.println(path);
+                System.out.println(LogAggregatorToolConstants.SORTED_FILE_PATH+path);
             }
         } catch (Exception exception) {
             exception.printStackTrace();
