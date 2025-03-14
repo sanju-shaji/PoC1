@@ -12,21 +12,16 @@ public class LogProcessor {
      * @param args
      */
     public void processFile(String[] args) {
-        boolean sucess;
         try {
             LogSorter fileSorter = new LogSorter();
             LogWriter logWriter = new LogWriter();
             fileSorter.sortFile(args);
-            String path = null;
-            path = logWriter.writeFile(args);
-
-            if (path == null) {
-                sucess = false;
+            boolean isFileProcessed = logWriter.writeFile(args);
+            if (!isFileProcessed) {
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_FAILED);
             } else {
-                sucess = true;
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS);
-                System.out.println(LogAggregatorToolConstants.SORTED_FILE_PATH+path);
+                System.out.println(LogAggregatorToolConstants.SORTED_FILE_PATH+logWriter.sortedLogPath);
             }
         } catch (Exception exception) {
             exception.printStackTrace();
