@@ -2,15 +2,17 @@ package tool.logaggregator.filehandler;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.UUID;
+import java.util.Date;
 
 /**
  * class for writing the sorted logdata to a single log file
  */
 public class LogWriter {
     String outputDirectory = "D:\\Internship\\SortedFiles";
-    public String sortedLogPath = outputDirectory + "\\sortedLog" + UUID.randomUUID() + ".log";
+    String currentDateTime = new SimpleDateFormat("yyyy-MM-dd-HH_mm-ss").format(new Date());
+    public String sortedLogPath = outputDirectory + "\\LogAggegator_Merged_File" + currentDateTime +".log";
     File outfile = new File(outputDirectory);
 
     /**
