@@ -1,5 +1,6 @@
 package tool.logaggregator.filehandler;
 
+import tool.logaggregator.constants.LogAggregatorToolConstants;
 import java.io.File;
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
@@ -10,9 +11,9 @@ import java.util.Date;
  * class for writing the sorted logdata to a single log file
  */
 public class LogWriter {
-    String outputDirectory = "D:\\Internship\\SortedFiles";
-    String currentDateTime = new SimpleDateFormat("yyyy-MM-dd-HH_mm-ss").format(new Date());
-    public String sortedLogPath = outputDirectory + "\\LogAggegator_Merged_File" + currentDateTime +".log";
+    String outputDirectory = LogAggregatorToolConstants.OUTPUT_DIRECTORY;
+    String currentDateTime = new SimpleDateFormat("yyyy-MM-dd-HH_mm_ss").format(new Date());
+    public String sortedLogPath = outputDirectory + LogAggregatorToolConstants.SORTED_FILE_NAME + currentDateTime + LogAggregatorToolConstants.LOG_EXTENSION;
     File outfile = new File(outputDirectory);
 
     /**

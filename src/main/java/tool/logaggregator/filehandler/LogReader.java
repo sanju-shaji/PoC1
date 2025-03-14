@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 /**
  * class for reading the log file data
+ * reads each line of logfile and store it to Arraylist
  */
 public class LogReader {
 
@@ -16,7 +17,7 @@ public class LogReader {
      * @param args :commandline argument
      * @return arraylist filedata which contains all the merged data
      */
-    public  ArrayList readData(String[] args) {
+    public ArrayList readData(String[] args) {
         String userFilePath = args[0];
         ArrayList<String> fileData = new ArrayList<>();
         File userFolder = new File(userFilePath);
