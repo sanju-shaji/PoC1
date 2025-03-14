@@ -10,15 +10,8 @@ public class LogAggregatorTool {
      */
     public static void main(String[] args) {
         InputValidator inputValidator = new InputValidator();
-        LogProcessor logProcessor =new LogProcessor();
-
-
+        LogProcessor logProcessor = new LogProcessor();
         inputValidator.validate(args);
-
-       logProcessor.processFile(args);
-//
-
-
-
+        logProcessor.processFile(args);
     }
 }

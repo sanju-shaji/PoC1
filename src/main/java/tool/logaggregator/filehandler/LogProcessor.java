@@ -1,5 +1,6 @@
 package tool.logaggregator.filehandler;
 
+import tool.logaggregator.constants.LogAggregatorToolConstants;
 /**
  * logprocessor class for calling logreader,logsorter,logwriter
  */
@@ -21,10 +22,10 @@ public class LogProcessor {
 
             if (path == null) {
                 sucess = false;
-                System.out.println("File Processing failed");
+                System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_FAILED);
             } else {
                 sucess = true;
-                System.out.println("file processing success");
+                System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS);
                 System.out.println(path);
             }
         } catch (Exception exception) {
