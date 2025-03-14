@@ -3,7 +3,6 @@ package tool.logaggregator;
 import tool.logaggregator.filehandler.LogProcessor;
 import tool.logaggregator.validator.InputValidator;
 
-
 public class LogAggregatorTool {
     /**
      * main method
