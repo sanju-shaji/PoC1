@@ -1,6 +1,7 @@
 package tool.logaggregator.validator;
 
 import tool.logaggregator.constants.LogAggregatorToolConstants;
+
 import java.io.File;
 
 /**
@@ -71,16 +72,15 @@ public class InputValidator {
     /**
      * validator method to run all the validation
      */
-    public void validate(String[] args) {
+    public boolean validate(String[] args) {
         if (!isCommandLineArgumentPresent(args)) {
-            return;
+            return false;
         }
-        try {
-            if (isValidDirectory(args) && isFolderEmpty(args)) {
-                validateExtensions(args);
-            }
-        } catch (Exception exception) {
-            exception.printStackTrace();
+        if (!isValidDirectory(args) || !isFolderEmpty(args)) {
+            return false;
         }
+        validateExtensions(args);
+        return true;
+
     }
 }

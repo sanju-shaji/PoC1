@@ -5,7 +5,7 @@ import tool.logaggregator.constants.LogAggregatorToolConstants;
 /**
  * logprocessor class for calling logreader,logsorter,logwriter
  */
-public class LogProcessor {
+public class LogFileProcessor {
 
     /**
      * call all the logprocessing classes and verify if file processing is succes or not
