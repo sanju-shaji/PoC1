@@ -17,6 +17,7 @@ public class LogAggregatorToolConstants {
     public static final String PROCESSING = "Processing...";
     public static final String REGEX_DATETIME_PATTERN = "\\d{4}-\\d{2}-\\d{2}";
     public static final String SIMPLE_DATE_TIME_PATTERN = "MM/dd/yyyy HH:mm:ss:sss";
+    public static final String SIMPLE_DATE_TIME_PATTERN_AUDIT = "yyyy-MM-dd HH:mm:ss";
     public static final String SLASH = "\\";
     public static final String SORTED_FILE_PATH = "Sorted File Path : ";
     public static final String SORTED_FILE_NAME = "\\LogAggegator_Merged_File ";
