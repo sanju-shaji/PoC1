@@ -20,7 +20,7 @@ public class LogFileProcessor {
             logFileSorter.sortLogFile(userFilePath);
             boolean isFileProcessed = logFileWriter.writeLogFile(userFilePath);
             if (isFileProcessed) {
-                System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + "\n" + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.sortedLogPath);
+                System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.sortedLogPath);
             } else {
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_FAILED);
             }
