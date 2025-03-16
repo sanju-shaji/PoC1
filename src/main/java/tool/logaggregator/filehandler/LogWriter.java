@@ -23,10 +23,8 @@ public class LogWriter {
      *
      * @return path of the new log file
      */
-    private  void logFileWriter(String userFilePath) {
-
-
-            try{
+    private void logFileWriter(String userFilePath) {
+        try {
             LogSorter fileSorter = new LogSorter();
             ArrayList<String> fileData = new ArrayList<>();
             fileData = fileSorter.sortLogFile(userFilePath);
@@ -37,27 +35,28 @@ public class LogWriter {
                 for (String line : fileData) {
                     writer.write(line);
                     writer.write(LogAggregatorToolConstants.NEW_LINE);
-                    writeResult =true;
+                    writeResult = true;
                 }
             }
         } catch (Exception exception) {
-                writeResult =false;
-
+            writeResult = false;
             exception.printStackTrace();
         }
     }
 
-   public boolean witeLogFile(String userfilepath){
+    /**
+     * Method to validate the path for storing sorted log file
+     * and write the sorted data to a single log file
+     *
+     * @param userfilepath
+     * @return
+     */
+    public boolean witeLogFile(String userfilepath) {
         if (!outfile.exists()) {
-            writeResult =false;
+            writeResult = false;
             return false;
-
-
-
-    }
+        }
         logFileWriter(userfilepath);
         return true;
-
-
-
-}}
+    }
+}
