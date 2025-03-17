@@ -15,14 +15,11 @@ public class LogSorter {
     /**
      * Method to sort all logs based on date and time
      *
-     * @return sorted arraylist fileData
+     * @return sorted arraylist mergedData
      */
-    public ArrayList sortLogFile(String userFilePath) {
-        LogReader logReader = new LogReader();
-        ArrayList<String> fileData;
-        fileData = logReader.readLogData(userFilePath);
+    public ArrayList sortLogFile(ArrayList mergedData) {
         SimpleDateFormat dateFormat = new SimpleDateFormat(LogAggregatorToolConstants.SIMPLE_DATE_TIME_PATTERN);
-        Collections.sort(fileData, new Comparator<String>() {
+        Collections.sort(mergedData, new Comparator<String>() {
             @Override
             public int compare(String logLineDate1, String logLineDate2) {
                 if (logLineDate1.matches(LogAggregatorToolConstants.REGEX_DATETIME_PATTERN) && logLineDate2.matches(LogAggregatorToolConstants.REGEX_DATETIME_PATTERN)) {
@@ -37,6 +34,6 @@ public class LogSorter {
                 return 0;
             }
         });
-        return fileData;
+        return mergedData;
     }
 }

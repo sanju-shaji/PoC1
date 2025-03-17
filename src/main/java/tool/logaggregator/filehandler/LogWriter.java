@@ -22,21 +22,18 @@ public class LogWriter {
      *
      * @return path of the new log file
      */
-    public boolean writeLogFile(String userFilePath) {
+    public boolean writeLogFile(ArrayList sortedData,String userFilePath) {
         try {
             if (!outfile.exists()) {
                 result=false;
                 return false;
             }
-            LogSorter fileSorter = new LogSorter();
-            ArrayList<String> fileData = new ArrayList<>();
-            fileData = fileSorter.sortLogFile(userFilePath);
             String sortedFilePath = sortedLogPath;
             {
                 File file = new File(sortedFilePath);
                 FileWriter writer = new FileWriter(file);
-                for (String line : fileData) {
-                    writer.write(line);
+                for (Object line : sortedData) {
+                    writer.write((String) line);
                     writer.write(LogAggregatorToolConstants.NEW_LINE);
                 }
             }

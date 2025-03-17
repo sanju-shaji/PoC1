@@ -11,6 +11,7 @@ import java.util.ArrayList;
  */
 public class LogReader {
 
+
     /**
      * method for reading and merging all the log files
      *
