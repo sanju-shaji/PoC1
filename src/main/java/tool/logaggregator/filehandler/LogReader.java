@@ -1,5 +1,6 @@
 package tool.logaggregator.filehandler;
 
+import tool.logaggregator.constants.LogAggregatorToolConstants;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.Reader;
@@ -22,7 +23,7 @@ public class LogReader {
         String[] folderContents = userFolder.list();
         try {
             for (String fileName : folderContents) {
-                Reader fileReader = new java.io.FileReader(userFilePath + "\\" + fileName);
+                Reader fileReader = new java.io.FileReader(userFilePath + LogAggregatorToolConstants.SLASH + fileName);
                 BufferedReader reader = new BufferedReader(fileReader);
                 String line;
                 while ((line = reader.readLine()) != null) {

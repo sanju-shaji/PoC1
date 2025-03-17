@@ -1,6 +1,7 @@
 package tool.logaggregator.filehandler;
 
 import tool.logaggregator.constants.LogAggregatorToolConstants;
+
 import java.util.ArrayList;
 
 /**
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 public class LogFileProcessor {
 
     /**
-     *method which execute the file processes
+     * method which execute the file processes
      * logFileReader,logFileSorter and logFileWriter are executed to
      * process the inputlogfiles and produce a single merged and sorted logfile
      *

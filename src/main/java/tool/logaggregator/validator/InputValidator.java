@@ -1,7 +1,6 @@
 package tool.logaggregator.validator;
 
 import tool.logaggregator.constants.LogAggregatorToolConstants;
-
 import java.io.File;
 
 /**

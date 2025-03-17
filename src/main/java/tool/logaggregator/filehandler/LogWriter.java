@@ -13,6 +13,7 @@ import java.util.Scanner;
  */
 public class LogWriter {
     public String outputFilePath;
+    String outputFolder;
     String currentDateTime = new SimpleDateFormat(LogAggregatorToolConstants.FILE_NAME_DATETIME_FORMAT).format(new Date());
     String sortedLogPath = LogAggregatorToolConstants.SORTED_FILE_NAME + currentDateTime + LogAggregatorToolConstants.LOG_EXTENSION;
 
@@ -24,9 +25,10 @@ public class LogWriter {
     public boolean writeLogFile(ArrayList sortedData) {
         try {
             String sortedFilePath = sortedLogPath;
-            Scanner scanner = new Scanner(System.in);
             System.out.println(LogAggregatorToolConstants.GIVE_OUTPUT_FOLDER_PATH);
-            String outputFolder = scanner.nextLine();
+            if (!verifyUserInputpath()) {
+                verifyUserInputpath();
+            }
             {
                 File file = new File(outputFolder + sortedFilePath);
                 FileWriter writer = new FileWriter(file);
@@ -40,5 +42,21 @@ public class LogWriter {
             exception.printStackTrace();
         }
         return true;
+    }
+
+    private boolean verifyUserInputpath() {
+        Scanner scanner = new Scanner(System.in);
+        outputFolder = scanner.nextLine();
+        try {
+            File file = new File(outputFolder);
+            if (file.exists() || file.isDirectory()) {
+                return true;
+            }
+        } catch (Exception exception) {
+            System.out.println(exception.getMessage());
+            return false;
+        }
+        System.out.println(LogAggregatorToolConstants.INVALID_PATH);
+        return false;
     }
 }
