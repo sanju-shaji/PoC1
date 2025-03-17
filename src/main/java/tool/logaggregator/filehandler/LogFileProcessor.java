@@ -32,7 +32,7 @@ public class LogFileProcessor {
             boolean isFileProcessed = logFileWriter.writeLogFile(sortedData);
             if (isFileProcessed) {
                 LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_SUCCESS, sortedFilePath, null);
-                System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.sortedLogPath);
+                System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.outputFilePath);
             } else {
                 LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_FAILED, null, error);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_FAILED);
