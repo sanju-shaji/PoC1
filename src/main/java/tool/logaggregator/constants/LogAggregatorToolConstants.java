@@ -4,7 +4,7 @@ package tool.logaggregator.constants;
  * class to hold all the string constants
  */
 public class LogAggregatorToolConstants {
-    public static final String ADD_AUDIT_QUERY = "INSERT INTO audit(folder_path, file_count, file_names, operation_datetime, result, output_file_name, error_message) VALUES(?, ?, ?, ?, ?, ?, ?)";
+    public static final String ADD_AUDIT_QUERY = "INSERT INTO audit(folder_path, file_count, file_names, operation_datetime, result, output_file_name, error_message) VALUES(?, ?, ?, NOW(), ?, ?, ?)";
     public static final String ARRAY_TO_STRING_DELIMITER = ",  ";
     public static final String DB_URL = "jdbc:mysql://localhost:3306/logaggregatoraudit";
     public static final String DB_USERNAME = "root";

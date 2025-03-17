@@ -1,5 +1,6 @@
 package tool.logaggregator.validator;
 
+import tool.logaggregator.audit.LogaggregatortoolAudit;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
 
 import java.io.File;
@@ -14,6 +15,7 @@ public class InputValidator {
     private boolean isCommandLineArgumentPresent(String[] args) {
         if (args.length == 0) {
             System.out.println(LogAggregatorToolConstants.NO_COMMAND_LINE_ARGUMENT);
+            LogaggregatortoolAudit.addAudit(null, 0, null, LogAggregatorToolConstants.PROCESS_FAILED, null, LogAggregatorToolConstants.NO_COMMAND_LINE_ARGUMENT);
             return false;
         }
         return true;
@@ -27,6 +29,8 @@ public class InputValidator {
         File userFolder = new File(userFolderPath);
         if (!(userFolder.isDirectory())) {
             System.out.println(LogAggregatorToolConstants.INVALID_PATH);
+            LogaggregatortoolAudit.addAudit(userFolderPath, 0, null, LogAggregatorToolConstants.PROCESS_FAILED, null, LogAggregatorToolConstants.INVALID_PATH);
+
             return false;
         }
         return true;
@@ -39,7 +43,9 @@ public class InputValidator {
         String userFolderPath = args[0];
         File userFolder = new File(userFolderPath);
         if (userFolder.length() == 0) {
+            LogaggregatortoolAudit.addAudit(userFolderPath, 0, null, LogAggregatorToolConstants.PROCESS_FAILED, null, LogAggregatorToolConstants.EMPTY_FOLDER);
             System.out.println(LogAggregatorToolConstants.EMPTY_FOLDER);
+
             return false;
         }
         return true;

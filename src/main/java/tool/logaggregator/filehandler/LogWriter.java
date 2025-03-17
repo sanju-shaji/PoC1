@@ -35,7 +35,6 @@ public class LogWriter {
                 for (String line : fileData) {
                     writer.write(line);
                     writer.write(LogAggregatorToolConstants.NEW_LINE);
-                    writeResult = true;
                 }
             }
         } catch (Exception exception) {
