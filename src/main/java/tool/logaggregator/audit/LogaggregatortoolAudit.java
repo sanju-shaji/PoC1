@@ -31,8 +31,8 @@ public class LogaggregatortoolAudit {
             preparedStatement.setString(5, sortedFilePath);
             preparedStatement.setString(6, errorMessage);
             preparedStatement.execute();
-        } catch (SQLException e) {
-            System.out.println("Audit Error: " + e.getMessage());
+        } catch (SQLException exception) {
+            System.out.println("Audit Error: " + exception.getMessage());
         }
     }
 }
