@@ -1,9 +1,6 @@
 package tool.logaggregator.audit;
 
 import tool.logaggregator.constants.LogAggregatorToolConstants;
-import tool.logaggregator.filehandler.LogWriter;
-
-import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -16,7 +13,6 @@ public class LogaggregatortoolAudit {
     private static final String auditDbUrl = LogAggregatorToolConstants.DB_URL;
     private static final String dbUserName = LogAggregatorToolConstants.DB_USERNAME;
     private static final String dbPassword = LogAggregatorToolConstants.DB_PASSWORD;
-    LogWriter logWriter = new LogWriter();
 
     /**
      * method to add the audit to audit table

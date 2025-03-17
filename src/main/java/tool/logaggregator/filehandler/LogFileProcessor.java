@@ -1,7 +1,7 @@
 package tool.logaggregator.filehandler;
 
+import tool.logaggregator.audit.LogaggregatortoolAudit;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
-
 import java.io.File;
 import java.util.ArrayList;
 
@@ -9,6 +9,7 @@ import java.util.ArrayList;
  * logprocessor class for calling logreader,logsorter,logwriter
  */
 public class LogFileProcessor {
+    public static String error;
 
     /**
      * call all the logprocessing classes and verify if file processing is succes or not
@@ -30,12 +31,14 @@ public class LogFileProcessor {
             String sortedFilePath = logFileWriter.sortedLogPath;
             boolean isFileProcessed = logFileWriter.writeLogFile(sortedData, args[0]);
             if (isFileProcessed) {
+                LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_SUCCESS, sortedFilePath, null);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.sortedLogPath);
             } else {
+                LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_FAILED, null, error);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_FAILED);
             }
         } catch (Exception exception) {
-            exception.printStackTrace();
+            error = exception.getMessage();
         }
     }
 }
