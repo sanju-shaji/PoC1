@@ -1,5 +1,6 @@
 package tool.logaggregator.filehandler;
 
+import tool.logaggregator.audit.LogaggregatortoolAudit;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
 
 import java.io.File;
@@ -22,7 +23,7 @@ public class LogWriter {
      *
      * @return path of the new log file
      */
-    public boolean writeLogFile(ArrayList sortedData, String userFilePath) {
+    public boolean writeLogFile(ArrayList sortedData) {
         try {
             if (!outfile.exists()) {
                 return false;

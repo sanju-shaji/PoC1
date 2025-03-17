@@ -10,6 +10,7 @@ public class LogAggregatorToolConstants {
     public static final String DB_USERNAME = "root";
     public static final String DB_PASSWORD = "Abc@1234";
     public static final String EMPTY_FOLDER = "Folder is empty";
+    public static final String INVALID_FOLDERPATH_FOR_STORING_MERGED_DATA = "Set a valid path for storing the sorted file";
     public static final String FILE_PROCESSING_FAILED = "File Processing failed";
     public static final String FILE_PROCESSING_SUCCESS = "File Processing success";
     public static final String FILE_NAME_DATETIME_FORMAT = "yyyy-MM-dd_HH_mm_ss";

@@ -29,7 +29,7 @@ public class LogFileProcessor {
             ArrayList<String> sortedData = logFileSorter.sortLogFile(mergedFileData);
             LogWriter logFileWriter = new LogWriter();
             String sortedFilePath = logFileWriter.sortedLogPath;
-            boolean isFileProcessed = logFileWriter.writeLogFile(sortedData, args[0]);
+            boolean isFileProcessed = logFileWriter.writeLogFile(sortedData);
             if (isFileProcessed) {
                 LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_SUCCESS, sortedFilePath, null);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.sortedLogPath);
