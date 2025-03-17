@@ -26,6 +26,10 @@ public class LogWriter {
             if (!outfile.exists()) {
                 return false;
             }
+
+
+
+
             String sortedFilePath = sortedLogPath;
             {
                 File file = new File(sortedFilePath);
