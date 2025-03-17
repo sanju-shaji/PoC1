@@ -30,11 +30,11 @@ public class LogWriter {
                 verifyUserInputpath();
             }
             {
-                File file = new File(outputFolder + sortedFilePath);
-                FileWriter writer = new FileWriter(file);
+                File outputLogFile = new File(outputFolder + sortedFilePath);
+                FileWriter fileWriter = new FileWriter(outputLogFile);
                 for (Object line : sortedData) {
-                    writer.write((String) line);
-                    writer.write(LogAggregatorToolConstants.NEW_LINE);
+                    fileWriter.write((String) line);
+                    fileWriter.write(LogAggregatorToolConstants.NEW_LINE);
                     outputFilePath = outputFolder + sortedFilePath;
                 }
             }

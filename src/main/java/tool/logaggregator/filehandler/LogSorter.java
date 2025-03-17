@@ -28,7 +28,8 @@ public class LogSorter {
                         Date date1 = dateFormat.parse(logLineDate1);
                         Date date2 = dateFormat.parse(logLineDate2);
                         return (date1.compareTo(date2));
-                    } catch (Exception e) {
+                    } catch (Exception exception) {
+                        exception.getMessage();
                         return 0;
                     }
                 }
