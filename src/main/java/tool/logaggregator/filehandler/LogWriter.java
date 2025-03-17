@@ -11,7 +11,6 @@ import java.util.Date;
  * class for writing the sorted logdata to a single log file
  */
 public class LogWriter {
-    public boolean result;
     String outputDirectory = LogAggregatorToolConstants.OUTPUT_DIRECTORY;
     String currentDateTime = new SimpleDateFormat(LogAggregatorToolConstants.FILE_NAME_DATETIME_FORMAT).format(new Date());
     public String sortedLogPath = outputDirectory + LogAggregatorToolConstants.SORTED_FILE_NAME + currentDateTime + LogAggregatorToolConstants.LOG_EXTENSION;
@@ -25,7 +24,6 @@ public class LogWriter {
     public boolean writeLogFile(ArrayList sortedData,String userFilePath) {
         try {
             if (!outfile.exists()) {
-                result=false;
                 return false;
             }
             String sortedFilePath = sortedLogPath;
@@ -40,7 +38,6 @@ public class LogWriter {
         } catch (Exception exception) {
             exception.printStackTrace();
         }
-        result=true;
         return true;
     }
 }
