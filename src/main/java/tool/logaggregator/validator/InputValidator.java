@@ -1,6 +1,7 @@
 package tool.logaggregator.validator;
 
 import tool.logaggregator.constants.LogAggregatorToolConstants;
+
 import java.io.File;
 
 /**
@@ -71,7 +72,7 @@ public class InputValidator {
     /**
      * validator method to run all the validation
      */
-    public boolean validate(String[] args) {
+    public boolean validateUserInput(String[] args) {
         if (!isCommandLineArgumentPresent(args)) {
             return false;
         }
@@ -80,6 +81,5 @@ public class InputValidator {
         }
         validateExtensions(args);
         return true;
-
     }
 }

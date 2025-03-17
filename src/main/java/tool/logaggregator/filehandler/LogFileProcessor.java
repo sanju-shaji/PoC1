@@ -4,12 +4,14 @@ import tool.logaggregator.constants.LogAggregatorToolConstants;
 import java.util.ArrayList;
 
 /**
- * logprocessor class for calling logreader,logsorter,logwriter
+ * class for handling the logfile processes
  */
 public class LogFileProcessor {
 
     /**
-     * call all the logprocessing classes and verify if file processing is succes or not
+     *method which execute the file processes
+     * logFileReader,logFileSorter and logFileWriter are executed to
+     * process the inputlogfiles and produce a single merged and sorted logfile
      *
      * @param args
      */
@@ -21,7 +23,7 @@ public class LogFileProcessor {
             LogSorter logFileSorter = new LogSorter();
             ArrayList<String> sortedData = logFileSorter.sortLogFile(mergedFileData);
             LogWriter logFileWriter = new LogWriter();
-            boolean isFileProcessed = logFileWriter.writeLogFile(sortedData, args[0]);
+            boolean isFileProcessed = logFileWriter.writeLogFile(sortedData);
             if (isFileProcessed) {
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.sortedLogPath);
             } else {
