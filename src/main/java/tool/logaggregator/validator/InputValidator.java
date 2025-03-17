@@ -2,7 +2,6 @@ package tool.logaggregator.validator;
 
 import tool.logaggregator.audit.LogaggregatortoolAudit;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
-
 import java.io.File;
 
 /**
@@ -57,8 +56,8 @@ public class InputValidator {
         System.out.println(LogAggregatorToolConstants.PROCESSING);
         File userFolder = new File(userFolderPath);
         String[] folderContents = userFolder.list();
-        int logFileCount = 0;
         int nonLogFilesCount = 0;
+        int logFileCount = 0;
         long totalFilesCount = folderContents.length;
         for (String files : folderContents) {
             if ((files.endsWith(".log"))) {

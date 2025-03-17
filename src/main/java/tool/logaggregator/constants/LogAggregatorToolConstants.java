@@ -13,7 +13,7 @@ public class LogAggregatorToolConstants {
     public static final String EMPTY_FOLDER = "Folder is empty";
     public static final String FILE_PROCESSING_FAILED = "File Processing failed";
     public static final String FILE_PROCESSING_SUCCESS = "File Processing success";
-    public static final String FILE_NAME_DATETIME_FORMAT = "yyyy-MM-dd_HH_mm_ss";
+    public static final String FILE_NAME_DATETIME_FORMAT = "yyyy-MM-dd_HH_mm_ss_ss";
     public static final String INVALID_LOG_FILES = " are invalid files";
     public static final String INVALID_PATH = "Invalid Folder Path. Please Provide a valid folder path";
     public static final String LOG_EXTENSION = ".log";
