@@ -11,6 +11,7 @@ public class LogAggregatorToolConstants {
     public static final String DB_USERNAME = "root";
     public static final String DB_PASSWORD = "Abc@1234";
     public static final String EMPTY_FOLDER = "Folder is empty";
+    public static final String EMPTY_LOGFILE = "log files are empty or no log data present in logfile";
     public static final String FILE_PROCESSING_FAILED = "File Processing failed";
     public static final String FILE_PROCESSING_SUCCESS = "File Processing success";
     public static final String FILE_NAME_DATETIME_FORMAT = "yyyy-MM-dd_HH_mm_ss_ss";
