@@ -33,8 +33,9 @@ public class LogWriter {
                 for (Object line : sortedData) {
                     fileWriter.write((String) line);
                     fileWriter.write(LogAggregatorToolConstants.NEW_LINE);
-                    outputFilePath = outputFolder + sortedFilePath;
                 }
+                outputFilePath = outputFolder + sortedFilePath;
+
             }
         } catch (Exception exception) {
             exception.printStackTrace();
