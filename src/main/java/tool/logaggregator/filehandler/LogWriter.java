@@ -26,17 +26,16 @@ public class LogWriter {
         try {
             String sortedFileName = sortedLogName;
             System.out.println(LogAggregatorToolConstants.GIVE_OUTPUT_FOLDER_PATH);
-            if (!verifyUserInputpath()) {
-                verifyUserInputpath();
-            }
+            if (!verifyUserInputpath()) {}
             {
                 File outputLogFile = new File(outputFolder + sortedFileName);
                 FileWriter fileWriter = new FileWriter(outputLogFile);
                 for (Object line : sortedData) {
                     fileWriter.write((String) line);
                     fileWriter.write(LogAggregatorToolConstants.NEW_LINE);
-                    outputFilePath = outputFolder + sortedFileName;
                 }
+                outputFilePath = outputFolder + sortedFileName;
+
             }
         } catch (Exception exception) {
             exception.printStackTrace();
