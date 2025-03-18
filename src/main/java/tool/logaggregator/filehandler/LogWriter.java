@@ -26,9 +26,7 @@ public class LogWriter {
         try {
             String sortedFilePath = sortedLogPath;
             System.out.println(LogAggregatorToolConstants.GIVE_OUTPUT_FOLDER_PATH);
-            if (!verifyUserInputpath()) {
-                verifyUserInputpath();
-            }
+            if (!verifyUserInputpath()) {}
             {
                 File outputLogFile = new File(outputFolder + sortedFilePath);
                 FileWriter fileWriter = new FileWriter(outputLogFile);
@@ -57,6 +55,7 @@ public class LogWriter {
             return false;
         }
         System.out.println(LogAggregatorToolConstants.INVALID_PATH);
+        verifyUserInputpath();
         return false;
     }
 }
