@@ -10,9 +10,6 @@ import java.sql.SQLException;
  * class for adding an audit whenever the logfiles get processed
  */
 public class LogaggregatortoolAudit {
-    private static final String auditDbUrl = LogAggregatorToolConstants.DB_URL;
-    private static final String dbUserName = LogAggregatorToolConstants.DB_USERNAME;
-    private static final String dbPassword = LogAggregatorToolConstants.DB_PASSWORD;
 
     /**
      * method to add the audit to audit table
@@ -22,7 +19,7 @@ public class LogaggregatortoolAudit {
     public static void addAudit(String userInputFilePath, int logFileCount, String logFileNames, String logFileProcessResult, String sortedFilePath, String errorMessage) {
         String addAuditQuery = LogAggregatorToolConstants.ADD_AUDIT_QUERY;
         try {
-            Connection connection = DriverManager.getConnection(auditDbUrl, dbUserName, dbPassword);
+            Connection connection = DriverManager.getConnection(LogAggregatorToolConstants.DB_URL, LogAggregatorToolConstants.DB_USERNAME, LogAggregatorToolConstants.DB_PASSWORD);
             PreparedStatement preparedStatement = connection.prepareStatement(addAuditQuery);
             preparedStatement.setString(1, userInputFilePath);
             preparedStatement.setInt(2, logFileCount);
