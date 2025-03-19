@@ -60,7 +60,7 @@ public class InputValidator {
         int logFileCount = 0;
         long totalFilesCount = folderContents.length;
         for (String files : folderContents) {
-            if ((files.endsWith(".log"))) {
+            if ((files.endsWith(LogAggregatorToolConstants.LOG_EXTENSION))) {
                 logFileCount += 1;
             }
             nonLogFilesCount = (int) totalFilesCount - logFileCount;

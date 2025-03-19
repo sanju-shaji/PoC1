@@ -31,16 +31,10 @@ public class LogFileProcessor {
             boolean isFileProcessed = logFileWriter.writeLogFile(sortedData);
             if (isFileProcessed) {
                 String sortedFilePath = logFileWriter.outputFilePath;
-                File checkSortedFile=new File(sortedFilePath);
-                if(checkSortedFile.length()!=0){
                     LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_SUCCESS, sortedFilePath, null);
                     System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.outputFilePath);
-                return;
-                }
-                LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_FAILED, null, LogAggregatorToolConstants.EMPTY_LOGFILE);
-                System.out.println(LogAggregatorToolConstants.EMPTY_LOGFILE);
             } else {
-                LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_FAILED, null, error);
+                LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_FAILED, null,LogAggregatorToolConstants.EMPTY_LOGFILE);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_FAILED);
             }
         } catch (Exception exception) {

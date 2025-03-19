@@ -4,7 +4,6 @@ package tool.logaggregator.constants;
  * class to hold all the string constants
  */
 public class LogAggregatorToolConstants {
-    public static final String GIVE_OUTPUT_FOLDER_PATH = "Enter folder path to Store output log file :";
     public static final String ADD_AUDIT_QUERY = "INSERT INTO audit(folder_path, file_count, file_names, operation_datetime, result, output_file_name, error_message) VALUES(?, ?, ?, NOW(), ?, ?, ?)";
     public static final String ARRAY_TO_STRING_DELIMITER = ",  ";
     public static final String DB_URL = "jdbc:mysql://localhost:3306/logaggregatoraudit";
@@ -15,6 +14,7 @@ public class LogAggregatorToolConstants {
     public static final String FILE_PROCESSING_FAILED = "File Processing failed";
     public static final String FILE_PROCESSING_SUCCESS = "File Processing success";
     public static final String FILE_NAME_DATETIME_FORMAT = "yyyy-MM-dd_HH_mm_ss_ss";
+    public static final String GIVE_OUTPUT_FOLDER_PATH = "Enter folder path to Store output log file :";
     public static final String INVALID_LOG_FILES = " are invalid files";
     public static final String INVALID_PATH = "Invalid Folder Path. Please Provide a valid folder path";
     public static final String LOG_EXTENSION = ".log";

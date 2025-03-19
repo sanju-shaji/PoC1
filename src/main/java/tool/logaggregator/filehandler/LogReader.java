@@ -13,14 +13,12 @@ import java.util.ArrayList;
  */
 public class LogReader {
 
-
     /**
      * method for reading and merging all the log files
      *
      * @return arraylist filedata which contains all the merged data
      */
     public ArrayList readLogData(String userFilePath) {
-
         ArrayList<String> fileData = new ArrayList<>();
         File userFolder = new File(userFilePath);
         String[] folderContents = userFolder.list();
@@ -34,7 +32,7 @@ public class LogReader {
                 }
             }
         } catch (Exception exception) {
-            System.out.println(exception.getMessage());;
+            System.out.println(exception.getMessage());
         }
         return fileData;
     }

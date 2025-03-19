@@ -1,6 +1,7 @@
 package tool.logaggregator.filehandler;
 
 import tool.logaggregator.constants.LogAggregatorToolConstants;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
@@ -29,7 +30,10 @@ public class LogWriter {
             System.out.println(LogAggregatorToolConstants.GIVE_OUTPUT_FOLDER_PATH);
             if (!verifyUserInputpath()) {
             }
-
+            if (sortedData.isEmpty()) {
+                System.out.println(LogAggregatorToolConstants.EMPTY_LOGFILE);
+                return false;
+            }
             {
                 File outputLogFile = new File(outputFolder + sortedFileName);
                 FileWriter fileWriter = new FileWriter(outputLogFile);
