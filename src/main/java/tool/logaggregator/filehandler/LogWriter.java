@@ -28,8 +28,7 @@ public class LogWriter {
 
             String sortedFileName = sortedLogName;
             System.out.println(LogAggregatorToolConstants.GIVE_OUTPUT_FOLDER_PATH);
-            if (!verifyUserInputpath()) {
-            }
+            if (verifyUserInputpath())
             if (sortedData.isEmpty()) {
                 System.out.println(LogAggregatorToolConstants.EMPTY_LOGFILE);
                 return false;

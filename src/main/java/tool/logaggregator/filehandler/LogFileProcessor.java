@@ -2,6 +2,7 @@ package tool.logaggregator.filehandler;
 
 import tool.logaggregator.audit.LogaggregatortoolAudit;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
+import tool.logaggregator.dao.AuditData;
 import java.io.File;
 import java.util.ArrayList;
 
@@ -29,12 +30,26 @@ public class LogFileProcessor {
             ArrayList<String> sortedData = logFileSorter.sortLogFile(mergedFileData);
             LogWriter logFileWriter = new LogWriter();
             boolean isFileProcessed = logFileWriter.writeLogFile(sortedData);
+            AuditData auditData = new AuditData();
+            LogaggregatortoolAudit logaggregatortoolAudit = new LogaggregatortoolAudit();
             if (isFileProcessed) {
                 String sortedFilePath = logFileWriter.outputFilePath;
-                    LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_SUCCESS, sortedFilePath, null);
-                    System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.outputFilePath);
+                auditData.setFolderPath(userFilePath);
+                auditData.setFileCount(logFileCount);
+                auditData.setFileNames(logFileNames);
+                auditData.setResult(LogAggregatorToolConstants.PROCESS_SUCCESS);
+                auditData.setOutputFileName(sortedFilePath);
+                auditData.setErrorMessage(null);
+                logaggregatortoolAudit.addAudit(auditData);
+                System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.outputFilePath);
             } else {
-                LogaggregatortoolAudit.addAudit(userFilePath, logFileCount, logFileNames, LogAggregatorToolConstants.PROCESS_FAILED, null,LogAggregatorToolConstants.EMPTY_LOGFILE);
+                auditData.setFolderPath(userFilePath);
+                auditData.setFileCount(logFileCount);
+                auditData.setFileNames(logFileNames);
+                auditData.setResult(LogAggregatorToolConstants.PROCESS_FAILED);
+                auditData.setOutputFileName(null);
+                auditData.setErrorMessage(LogAggregatorToolConstants.EMPTY_LOGFILE);
+                logaggregatortoolAudit.addAudit(auditData);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_FAILED);
             }
         } catch (Exception exception) {
