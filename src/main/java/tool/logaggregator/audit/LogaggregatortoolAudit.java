@@ -20,7 +20,7 @@ public class LogaggregatortoolAudit {
      *
      * @return
      */
-    private static Properties getProperties() {
+    private Properties getProperties() {
         Properties properties = new Properties();
         try (FileInputStream fileInputStreamer = new FileInputStream(LogAggregatorToolConstants.PROPERTIES_FILE_PATH)) {
             properties.load(fileInputStreamer);
