@@ -31,7 +31,7 @@ public class LogReader {
                 }
             }
         } catch (Exception exception) {
-            throw new RuntimeException(exception);
+            System.out.println(exception.getMessage());
         }
         return fileData;
     }

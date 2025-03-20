@@ -1,18 +1,29 @@
 package tool.logaggregator.validator;
 
+import tool.logaggregator.audit.LogaggregatortoolAudit;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
+import tool.logaggregator.dao.AuditData;
+import tool.logaggregator.util.LogAggregatorToolUtil;
 import java.io.File;
 
 /**
  * validation class to validate inputs the user input
  */
 public class InputValidator {
+    private final LogaggregatortoolAudit logaggregatortoolAudit = new LogaggregatortoolAudit();
+    LogAggregatorToolUtil logAggregatorToolUtil = new LogAggregatorToolUtil();
     /**
      * menthod to check if user provides a folder path as an argument
      */
+    private AuditData auditData;
+
     private boolean isCommandLineArgumentPresent(String[] args) {
         if (args.length == 0) {
             System.out.println(LogAggregatorToolConstants.NO_COMMAND_LINE_ARGUMENT);
+            auditData = logAggregatorToolUtil.setDaoData(null, 0, null,
+                    LogAggregatorToolConstants.PROCESS_FAILED, null,
+                    LogAggregatorToolConstants.NO_COMMAND_LINE_ARGUMENT);
+            logaggregatortoolAudit.addAudit(auditData);
             return false;
         }
         return true;
@@ -26,6 +37,10 @@ public class InputValidator {
         File userFolder = new File(userFolderPath);
         if (!(userFolder.isDirectory())) {
             System.out.println(LogAggregatorToolConstants.INVALID_PATH);
+            auditData = logAggregatorToolUtil.setDaoData(userFolderPath, 0,
+                    null, LogAggregatorToolConstants.PROCESS_FAILED, null,
+                    LogAggregatorToolConstants.INVALID_PATH);
+            logaggregatortoolAudit.addAudit(auditData);
             return false;
         }
         return true;
@@ -37,7 +52,11 @@ public class InputValidator {
     private boolean isFolderEmpty(String[] args) {
         String userFolderPath = args[0];
         File userFolder = new File(userFolderPath);
-        if (userFolder.length() == 0) {
+        if (userFolder.list().length == 0) {
+            auditData = logAggregatorToolUtil.setDaoData(userFolderPath, 0, null,
+                    LogAggregatorToolConstants.PROCESS_FAILED, null,
+                    LogAggregatorToolConstants.EMPTY_FOLDER);
+            logaggregatortoolAudit.addAudit(auditData);
             System.out.println(LogAggregatorToolConstants.EMPTY_FOLDER);
             return false;
         }
@@ -52,20 +71,22 @@ public class InputValidator {
         System.out.println(LogAggregatorToolConstants.PROCESSING);
         File userFolder = new File(userFolderPath);
         String[] folderContents = userFolder.list();
-        int logFileCount = 0;
         int nonLogFilesCount = 0;
+        int logFileCount = 0;
         long totalFilesCount = folderContents.length;
         for (String files : folderContents) {
-            if ((files.endsWith(".log"))) {
+            if ((files.endsWith(LogAggregatorToolConstants.LOG_EXTENSION))) {
                 logFileCount += 1;
             }
             nonLogFilesCount = (int) totalFilesCount - logFileCount;
         }
         System.out.println(LogAggregatorToolConstants.TOTAL_FILE_COUNT + totalFilesCount);
         if (nonLogFilesCount != 0) {
-            System.out.println(nonLogFilesCount + LogAggregatorToolConstants.SLASH + totalFilesCount + LogAggregatorToolConstants.INVALID_LOG_FILES);
+            System.out.println(nonLogFilesCount + LogAggregatorToolConstants.SLASH + totalFilesCount +
+                    LogAggregatorToolConstants.INVALID_LOG_FILES);
         }
-        System.out.println(logFileCount + LogAggregatorToolConstants.SLASH + totalFilesCount + LogAggregatorToolConstants.VALID_LOG_FILES);
+        System.out.println(logFileCount + LogAggregatorToolConstants.SLASH + totalFilesCount +
+                LogAggregatorToolConstants.VALID_LOG_FILES);
     }
 
     /**

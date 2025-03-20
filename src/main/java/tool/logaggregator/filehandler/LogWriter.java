@@ -15,7 +15,7 @@ public class LogWriter {
     public String outputFilePath;
     String outputFolder;
     String currentDateTime = new SimpleDateFormat(LogAggregatorToolConstants.FILE_NAME_DATETIME_FORMAT).format(new Date());
-    String sortedLogPath = LogAggregatorToolConstants.SORTED_FILE_NAME + currentDateTime + LogAggregatorToolConstants.LOG_EXTENSION;
+    String sortedLogName = LogAggregatorToolConstants.SORTED_FILE_NAME + currentDateTime + LogAggregatorToolConstants.LOG_EXTENSION;
 
     /**
      * method for writing the sorted logdata to a log file
@@ -24,18 +24,21 @@ public class LogWriter {
      */
     public boolean writeLogFile(ArrayList sortedData) {
         try {
-            String sortedFilePath = sortedLogPath;
+            String sortedFileName = sortedLogName;
             System.out.println(LogAggregatorToolConstants.GIVE_OUTPUT_FOLDER_PATH);
-            if (!verifyUserInputpath()) {}
+            if (verifyUserInputpath())
+                if (sortedData.isEmpty()) {
+                    System.out.println(LogAggregatorToolConstants.EMPTY_LOGFILE);
+                    return false;
+                }
             {
-                File outputLogFile = new File(outputFolder + sortedFilePath);
+                File outputLogFile = new File(outputFolder + sortedFileName);
                 FileWriter fileWriter = new FileWriter(outputLogFile);
                 for (Object line : sortedData) {
                     fileWriter.write((String) line);
                     fileWriter.write(LogAggregatorToolConstants.NEW_LINE);
                 }
-                outputFilePath = outputFolder + sortedFilePath;
-
+                outputFilePath = outputFolder + sortedFileName;
             }
         } catch (Exception exception) {
             exception.printStackTrace();
@@ -43,6 +46,10 @@ public class LogWriter {
         return true;
     }
 
+    /**
+     * Method for checking if the user input path for storing the sorted file is valid or not
+     * @return
+     */
     private boolean verifyUserInputpath() {
         Scanner scanner = new Scanner(System.in);
         outputFolder = scanner.nextLine();
