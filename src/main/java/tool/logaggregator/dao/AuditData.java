@@ -1,12 +1,12 @@
 package tool.logaggregator.dao;
 
 public class AuditData {
-    String folderPath;
-    int fileCount;
-    String fileNames;
-    String result;
-    String outputFileName;
-    String errorMessage;
+    private String folderPath;
+    private int fileCount;
+    private String fileNames;
+    private String result;
+    private String outputFileName;
+    private String errorMessage;
 
     public String getFolderPath() {
         return folderPath;
