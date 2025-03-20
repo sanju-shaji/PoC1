@@ -21,7 +21,7 @@ public class LogAggregatorToolConstants {
     public static final String NEW_LINE = "\n";
     public static final String NO_COMMAND_LINE_ARGUMENT = "Please provide folderpath as argument ";
     public static final String PROCESSING = "Processing...";
-    public static final String PROCESS_SUCCESS = "Sucess";
+    public static final String PROCESS_SUCCESS = "Success";
     public static final String PROCESS_FAILED = "Failed";
     public static final String PROPERTIES_FILE_PATH = "src/main/resources/application.properties";
     public static final String REGEX_DATETIME_PATTERN = "\\d{4}-\\d{2}-\\d{2}";

@@ -6,7 +6,6 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.Reader;
 import java.util.ArrayList;
-
 /**
  * class for reading the log file data
  * reads each line of logfile and store it to Arraylist

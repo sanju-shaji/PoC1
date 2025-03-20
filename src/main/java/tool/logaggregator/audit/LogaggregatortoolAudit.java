@@ -47,7 +47,7 @@ public class LogaggregatortoolAudit {
             preparedStatement.setString(6, auditData.getErrorMessage());
             preparedStatement.execute();
         } catch (SQLException exception) {
-            exception.printStackTrace();
+            exception.getMessage();
         } catch (Exception exception) {
             throw new RuntimeException(exception);
         }
