@@ -4,7 +4,6 @@ import tool.logaggregator.audit.LogaggregatortoolAudit;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
 import tool.logaggregator.dao.AuditData;
 import tool.logaggregator.util.LogAggregatorToolUtil;
-
 import java.io.File;
 
 /**
@@ -21,7 +20,9 @@ public class InputValidator {
     private boolean isCommandLineArgumentPresent(String[] args) {
         if (args.length == 0) {
             System.out.println(LogAggregatorToolConstants.NO_COMMAND_LINE_ARGUMENT);
-            auditData = logAggregatorToolUtil.setDaoData(null, 0, null, LogAggregatorToolConstants.PROCESS_FAILED, null, LogAggregatorToolConstants.NO_COMMAND_LINE_ARGUMENT);
+            auditData = logAggregatorToolUtil.setDaoData(null, 0, null,
+                    LogAggregatorToolConstants.PROCESS_FAILED, null,
+                    LogAggregatorToolConstants.NO_COMMAND_LINE_ARGUMENT);
             logaggregatortoolAudit.addAudit(auditData);
             return false;
         }
@@ -81,9 +82,11 @@ public class InputValidator {
         }
         System.out.println(LogAggregatorToolConstants.TOTAL_FILE_COUNT + totalFilesCount);
         if (nonLogFilesCount != 0) {
-            System.out.println(nonLogFilesCount + LogAggregatorToolConstants.SLASH + totalFilesCount + LogAggregatorToolConstants.INVALID_LOG_FILES);
+            System.out.println(nonLogFilesCount + LogAggregatorToolConstants.SLASH + totalFilesCount +
+                    LogAggregatorToolConstants.INVALID_LOG_FILES);
         }
-        System.out.println(logFileCount + LogAggregatorToolConstants.SLASH + totalFilesCount + LogAggregatorToolConstants.VALID_LOG_FILES);
+        System.out.println(logFileCount + LogAggregatorToolConstants.SLASH + totalFilesCount +
+                LogAggregatorToolConstants.VALID_LOG_FILES);
     }
 
     /**

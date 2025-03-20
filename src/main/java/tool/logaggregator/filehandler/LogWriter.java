@@ -46,6 +46,10 @@ public class LogWriter {
         return true;
     }
 
+    /**
+     * Method for checking if the user input path for storing the sorted file is valid or not
+     * @return
+     */
     private boolean verifyUserInputpath() {
         Scanner scanner = new Scanner(System.in);
         outputFolder = scanner.nextLine();
