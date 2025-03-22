@@ -1,6 +1,7 @@
 package tool.logaggregator.filehandler;
 
 import tool.logaggregator.constants.LogAggregatorToolConstants;
+
 import java.io.File;
 import java.io.FileWriter;
 import java.text.SimpleDateFormat;
@@ -23,31 +24,31 @@ public class LogWriter {
      * @return path of the new log file
      */
     public boolean writeLogFile(ArrayList sortedData) {
-        try {
-            String sortedFileName = sortedLogName;
-            System.out.println(LogAggregatorToolConstants.GIVE_OUTPUT_FOLDER_PATH);
-            if (verifyUserInputpath())
-                if (sortedData.isEmpty()) {
-                    System.out.println(LogAggregatorToolConstants.EMPTY_LOGFILE);
-                    return false;
-                }
-            {
-                File outputLogFile = new File(outputFolder + sortedFileName);
-                FileWriter fileWriter = new FileWriter(outputLogFile);
-                for (Object line : sortedData) {
-                    fileWriter.write((String) line);
-                    fileWriter.write(LogAggregatorToolConstants.NEW_LINE);
-                }
+
+        String sortedFileName = sortedLogName;
+        System.out.println(LogAggregatorToolConstants.GIVE_OUTPUT_FOLDER_PATH);
+        if (verifyUserInputpath())
+            if (sortedData.isEmpty()) {
+                System.out.println(LogAggregatorToolConstants.EMPTY_LOGFILE);
+                return false;
+            }
+        File outputLogFile = new File(outputFolder + sortedFileName);
+        try (FileWriter fileWriter = new FileWriter(outputLogFile)) {
+            for (Object line : sortedData) {
+                fileWriter.write((String) line);
+                fileWriter.write(LogAggregatorToolConstants.NEW_LINE);
+
                 outputFilePath = outputFolder + sortedFileName;
             }
         } catch (Exception exception) {
-            exception.printStackTrace();
+            System.out.println(exception.getMessage());
         }
         return true;
     }
 
     /**
      * Method for checking if the user input path for storing the sorted file is valid or not
+     *
      * @return
      */
     private boolean verifyUserInputpath() {

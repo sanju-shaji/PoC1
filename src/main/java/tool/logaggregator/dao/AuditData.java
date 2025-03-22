@@ -1,11 +1,13 @@
 package tool.logaggregator.dao;
 
-import lombok.*;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * Entity class for variables used for auditting data in database
  */
-@Data
+@Getter
+@Setter
 public class AuditData {
     private String folderPath;
     private int fileCount;

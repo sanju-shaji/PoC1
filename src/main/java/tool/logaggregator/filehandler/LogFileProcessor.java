@@ -35,19 +35,20 @@ public class LogFileProcessor {
             LogAggregatorToolUtil logAggregatorToolUtil = new LogAggregatorToolUtil();
             if (isFileProcessed) {
                 String sortedFilePath = logFileWriter.outputFilePath;
-                auditData = logAggregatorToolUtil.setDaoData(userFilePath, logFileCount, logFileNames,
+                auditData = logAggregatorToolUtil.buildAuditData(userFilePath, logFileCount, logFileNames,
                         LogAggregatorToolConstants.PROCESS_SUCCESS, sortedFilePath, null);
                 logaggregatortoolAudit.addAudit(auditData);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.outputFilePath);
             } else {
-                auditData = logAggregatorToolUtil.setDaoData(userFilePath, logFileCount, logFileNames,
+                auditData = logAggregatorToolUtil.buildAuditData(userFilePath, logFileCount, logFileNames,
                         LogAggregatorToolConstants.PROCESS_FAILED, null,
                         LogAggregatorToolConstants.EMPTY_LOGFILE);
                 logaggregatortoolAudit.addAudit(auditData);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_FAILED);
             }
         } catch (Exception exception) {
-            exception.getMessage();
+            System.out.println(exception.getMessage());
+            exception.printStackTrace();
         }
     }
 }

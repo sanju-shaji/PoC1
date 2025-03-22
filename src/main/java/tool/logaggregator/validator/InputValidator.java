@@ -15,12 +15,11 @@ public class InputValidator {
     /**
      * menthod to check if user provides a folder path as an argument
      */
-    private AuditData auditData;
-
     private boolean isCommandLineArgumentPresent(String[] args) {
         if (args.length == 0) {
             System.out.println(LogAggregatorToolConstants.NO_COMMAND_LINE_ARGUMENT);
-            auditData = logAggregatorToolUtil.setDaoData(null, 0, null,
+            AuditData auditData;
+            auditData = logAggregatorToolUtil.buildAuditData(null, 0, null,
                     LogAggregatorToolConstants.PROCESS_FAILED, null,
                     LogAggregatorToolConstants.NO_COMMAND_LINE_ARGUMENT);
             logaggregatortoolAudit.addAudit(auditData);
@@ -37,7 +36,8 @@ public class InputValidator {
         File userFolder = new File(userFolderPath);
         if (!(userFolder.isDirectory())) {
             System.out.println(LogAggregatorToolConstants.INVALID_PATH);
-            auditData = logAggregatorToolUtil.setDaoData(userFolderPath, 0,
+            AuditData auditData;
+            auditData = logAggregatorToolUtil.buildAuditData(userFolderPath, 0,
                     null, LogAggregatorToolConstants.PROCESS_FAILED, null,
                     LogAggregatorToolConstants.INVALID_PATH);
             logaggregatortoolAudit.addAudit(auditData);
@@ -53,7 +53,8 @@ public class InputValidator {
         String userFolderPath = args[0];
         File userFolder = new File(userFolderPath);
         if (userFolder.list().length == 0) {
-            auditData = logAggregatorToolUtil.setDaoData(userFolderPath, 0, null,
+            AuditData auditData;
+            auditData = logAggregatorToolUtil.buildAuditData(userFolderPath, 0, null,
                     LogAggregatorToolConstants.PROCESS_FAILED, null,
                     LogAggregatorToolConstants.EMPTY_FOLDER);
             logaggregatortoolAudit.addAudit(auditData);

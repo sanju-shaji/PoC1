@@ -2,21 +2,31 @@ plugins {
     id 'java'
 }
 
-group = 'org.example'
+jar {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    manifest {
+        attributes(
+                'Main-Class': 'tool.logaggregator.LogAggregatorTool'
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+group = 'tool.logaggregator'
 version = '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
-
 dependencies {
     testImplementation platform('org.junit:junit-bom:5.9.1')
     testImplementation 'org.junit.jupiter:junit-jupiter'
-    implementation "mysql:mysql-connector-java:8.0.33"
+    implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.33'
+    implementation 'com.mysql:mysql-connector-j:8.3.0'
     implementation 'org.projectlombok:lombok:1.18.36'
     annotationProcessor 'org.projectlombok:lombok:1.18.36'
 }
-
 test {
     useJUnitPlatform()
 }
