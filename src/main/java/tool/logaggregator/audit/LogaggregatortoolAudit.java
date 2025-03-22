@@ -1,8 +1,8 @@
 package tool.logaggregator.audit;
 
-import tool.logaggregator.constants.DatabaseConstant;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
 import tool.logaggregator.dao.AuditData;
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.*;
@@ -12,7 +12,7 @@ import java.util.Properties;
  * class for adding an audit whenever the logfiles get processed
  */
 public class LogaggregatortoolAudit {
-        /**
+    /**
      * This method loads the property file
      *
      * @return
@@ -60,7 +60,6 @@ public class LogaggregatortoolAudit {
         Properties properties = getProperties();
         try {
             connection = DriverManager.getConnection(properties.getProperty(LogAggregatorToolConstants.DB_URL), properties.getProperty(LogAggregatorToolConstants.DB_USERNAME), properties.getProperty(LogAggregatorToolConstants.DB_PASSWORD));
-//            connection = DriverManager.getConnection(DatabaseConstant.DB_URL, DatabaseConstant.DB_USERNAME, DatabaseConstant.DB_PASSWORD);
         } catch (SQLException sqlException) {
             System.out.println(sqlException.getMessage() + sqlException.getErrorCode());
         } catch (Exception e) {

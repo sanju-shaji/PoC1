@@ -4,6 +4,7 @@ import tool.logaggregator.audit.LogaggregatortoolAudit;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
 import tool.logaggregator.dao.AuditData;
 import tool.logaggregator.util.LogAggregatorToolUtil;
+
 import java.io.File;
 
 /**
@@ -12,6 +13,7 @@ import java.io.File;
 public class InputValidator {
     private final LogaggregatortoolAudit logaggregatortoolAudit = new LogaggregatortoolAudit();
     LogAggregatorToolUtil logAggregatorToolUtil = new LogAggregatorToolUtil();
+
     /**
      * menthod to check if user provides a folder path as an argument
      */
