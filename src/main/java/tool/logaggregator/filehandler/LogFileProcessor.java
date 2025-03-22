@@ -4,6 +4,7 @@ import tool.logaggregator.audit.LogaggregatortoolAudit;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
 import tool.logaggregator.dao.AuditData;
 import tool.logaggregator.util.LogAggregatorToolUtil;
+
 import java.io.File;
 import java.util.ArrayList;
 
@@ -34,9 +35,9 @@ public class LogFileProcessor {
             LogaggregatortoolAudit logaggregatortoolAudit = new LogaggregatortoolAudit();
             LogAggregatorToolUtil logAggregatorToolUtil = new LogAggregatorToolUtil();
             if (isFileProcessed) {
-                String sortedFilePath = logFileWriter.outputFilePath;
+                String sortedLogName = logFileWriter.sortedLogName;
                 auditData = logAggregatorToolUtil.buildAuditData(userFilePath, logFileCount, logFileNames,
-                        LogAggregatorToolConstants.PROCESS_SUCCESS, sortedFilePath, null);
+                        LogAggregatorToolConstants.PROCESS_SUCCESS, sortedLogName, null);
                 logaggregatortoolAudit.addAudit(auditData);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.outputFilePath);
             } else {

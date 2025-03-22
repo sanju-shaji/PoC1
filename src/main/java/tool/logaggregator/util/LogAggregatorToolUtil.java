@@ -7,10 +7,11 @@ import tool.logaggregator.dao.AuditData;
  */
 public class LogAggregatorToolUtil {
     /**
-     *Method for setting all the dao data for auditting in DB
+     * Method for setting all the dao data for auditting in DB
+     *
      * @return
      */
-    public AuditData buildAuditData(String folderPath, int fileCount, String fileNames, String result, String outputFileName, String errorMessage){
+    public AuditData buildAuditData(String folderPath, int fileCount, String fileNames, String result, String outputFileName, String errorMessage) {
         AuditData auditData = new AuditData();
         auditData.setFolderPath(folderPath);
         auditData.setFileCount(fileCount);

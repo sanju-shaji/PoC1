@@ -4,21 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49cd6784-69c5-4059-865d-540411c48fee" name="Changes" comment="added documentations">
+    <list default="true" id="49cd6784-69c5-4059-865d-540411c48fee" name="Changes" comment="modified the LogSorter:resolved issues in sorting">
       <change afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/constants/DatabaseConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/LogAggregatorTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/LogAggregatorTool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/audit/LogaggregatortoolAudit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/audit/LogaggregatortoolAudit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/constants/LogAggregatorToolConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/constants/LogAggregatorToolConstants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/dao/AuditData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/dao/AuditData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogFileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogFileProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogSorter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/util/LogAggregatorToolUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/util/LogAggregatorToolUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/validator/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/validator/InputValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +27,9 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
         <task path="$PROJECT_DIR$">
           <activation />
         </task>
@@ -89,6 +86,7 @@
     </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
+        <entry key="$PROJECT_DIR$" value="logfileAudit" />
         <entry key="$PROJECT_DIR$" value="feature/processing" />
       </map>
     </option>
@@ -107,36 +105,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
-    &quot;Application.cla_run.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build Poc1.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.D:/Internship/PoC1 [:LogAggregatorTool.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [:LogAggregatorTool.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [:Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [LogAggregatorTool.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [Main.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [build] (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [build] (2).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [clean] (1).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [clean] (2).executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Poc1 [clean].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;logfileAudit&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/sanju.shaji/OneDrive - Elixr Labs/Documents/LogAggregator/PoC1&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Internship/PoC1/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Unnamed.executor": "Run",
+    "Application.cla_run.executor": "Run",
+    "Gradle.Build Poc1.executor": "Run",
+    "Gradle.D:/Internship/PoC1 [:LogAggregatorTool.main()].executor": "Run",
+    "Gradle.Poc1 [:LogAggregatorTool.main()].executor": "Run",
+    "Gradle.Poc1 [:Main.main()].executor": "Run",
+    "Gradle.Poc1 [LogAggregatorTool.main()].executor": "Run",
+    "Gradle.Poc1 [Main.main()].executor": "Run",
+    "Gradle.Poc1 [build] (1).executor": "Run",
+    "Gradle.Poc1 [build] (2).executor": "Run",
+    "Gradle.Poc1 [build].executor": "Run",
+    "Gradle.Poc1 [clean] (1).executor": "Run",
+    "Gradle.Poc1 [clean] (2).executor": "Run",
+    "Gradle.Poc1 [clean].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "logfileAudit__jar",
+    "jdk.selected.JAVA_MODULE": "17",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/sanju.shaji/OneDrive - Elixr Labs/Documents/LogAggregator/PoC1",
+    "onboarding.tips.debug.path": "D:/Internship/PoC1/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.cla_run">
     <configuration name="cla_run" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="17" />
@@ -269,10 +267,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.Poc1 [build]" />
-        <item itemvalue="Gradle.Poc1 [clean]" />
-        <item itemvalue="Gradle.Poc1 [build] (2)" />
-        <item itemvalue="Gradle.Poc1 [clean] (2)" />
         <item itemvalue="Gradle.Poc1 [build] (1)" />
+        <item itemvalue="Gradle.Poc1 [clean] (2)" />
+        <item itemvalue="Gradle.Poc1 [build] (2)" />
+        <item itemvalue="Gradle.Poc1 [clean]" />
       </list>
     </recent_temporary>
   </component>
@@ -284,14 +282,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1741244680332</updated>
-    </task>
-    <task id="LOCAL-00016" summary="revised the code based on comments and resolved the comments&#10;&#10;made the feature as a seperate class file">
-      <option name="closed" value="true" />
-      <created>1741690655631</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1741690655631</updated>
     </task>
     <task id="LOCAL-00017" summary="revised the code based on comments and resolved the comments&#10;&#10;made the feature as a seperate class file">
       <option name="closed" value="true" />
@@ -677,7 +667,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742470000223</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="modified the LogSorter:resolved issues in sorting">
+      <option name="closed" value="true" />
+      <created>1742667288939</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1742667288940</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -722,7 +720,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="file read&#10;file sort&#10;file write" />
     <MESSAGE value="implemented all the required changes as comments" />
     <MESSAGE value="Implented file processing.&#10;all the files will be merged,sorted and will be written in a single log file" />
     <MESSAGE value="Added functionality to verify sortedFilePath" />
@@ -747,7 +744,8 @@
     <MESSAGE value="Made changes according to the comments" />
     <MESSAGE value="Implemented util class" />
     <MESSAGE value="added documentations" />
-    <option name="LAST_COMMIT_MESSAGE" value="added documentations" />
+    <MESSAGE value="modified the LogSorter:resolved issues in sorting" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified the LogSorter:resolved issues in sorting" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
