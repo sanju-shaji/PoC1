@@ -4,7 +4,11 @@ import tool.logaggregator.constants.DatabaseConstant;
 import tool.logaggregator.constants.LogAggregatorToolConstants;
 import tool.logaggregator.dao.AuditData;
 
-import java.sql.*;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
 
 /**
  * class for adding an audit whenever the logfiles get processed
