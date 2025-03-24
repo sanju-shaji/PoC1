@@ -4,9 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49cd6784-69c5-4059-865d-540411c48fee" name="Changes" comment="Added feature to take user input">
+    <list default="true" id="49cd6784-69c5-4059-865d-540411c48fee" name="Changes" comment="added documentations">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/constants/DatabaseConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/LogAggregatorTool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/LogAggregatorTool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/audit/LogaggregatortoolAudit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/audit/LogaggregatortoolAudit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/constants/LogAggregatorToolConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/constants/LogAggregatorToolConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/dao/AuditData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/dao/AuditData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogFileProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogFileProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogSorter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogSorter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/filehandler/LogWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/util/LogAggregatorToolUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/util/LogAggregatorToolUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/tool/logaggregator/validator/InputValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tool/logaggregator/validator/InputValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +30,42 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Poc1" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Poc1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Poc1" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Poc1" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -26,7 +74,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="feature/fileprocessing" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="feature/processing" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="SYNC" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -42,19 +109,173 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;Application.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;Application.cla_run.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build Poc1.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.D:/Internship/PoC1 [:LogAggregatorTool.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Poc1 [:LogAggregatorTool.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Poc1 [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Poc1 [LogAggregatorTool.main()].executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Poc1 [Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Poc1 [build] (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Poc1 [build] (2).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Poc1 [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Poc1 [clean] (1).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Poc1 [clean] (2).executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Poc1 [clean].executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/processing&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;logfileAudit&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sanju.shaji/OneDrive - Elixr Labs/Documents/LogAggregator/PoC1&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;D:/Internship/PoC1/src/main/java/org/example/Main.java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
+  <component name="RunManager" selected="Application.cla_run">
+    <configuration name="cla_run" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="tool.logaggregator.LogAggregatorTool" />
+      <module name="Poc1.main" />
+      <option name="PROGRAM_PARAMETERS" value="D:\New" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Poc1 [build] (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Poc1 [build] (2)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Poc1 [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Poc1 [clean] (2)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="Poc1 [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.cla_run" />
+      <item itemvalue="Gradle.Poc1 [clean]" />
+      <item itemvalue="Gradle.Poc1 [build] (2)" />
+      <item itemvalue="Gradle.Poc1 [clean] (2)" />
+      <item itemvalue="Gradle.Poc1 [build] (1)" />
+      <item itemvalue="Gradle.Poc1 [build]" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Poc1 [build]" />
+        <item itemvalue="Gradle.Poc1 [clean]" />
+        <item itemvalue="Gradle.Poc1 [build] (2)" />
+        <item itemvalue="Gradle.Poc1 [clean] (2)" />
+        <item itemvalue="Gradle.Poc1 [build] (1)" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -64,56 +285,403 @@
       <option name="presentableId" value="Default" />
       <updated>1741244680332</updated>
     </task>
-    <task id="LOCAL-00001" summary="Initial Commit">
+    <task id="LOCAL-00016" summary="revised the code based on comments and resolved the comments&#10;&#10;made the feature as a seperate class file">
       <option name="closed" value="true" />
-      <created>1741245681012</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
+      <created>1741690655631</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
       <option name="project" value="LOCAL" />
-      <updated>1741245681012</updated>
+      <updated>1741690655631</updated>
     </task>
-    <task id="LOCAL-00002" summary="Added feature to take user input">
+    <task id="LOCAL-00017" summary="revised the code based on comments and resolved the comments&#10;&#10;made the feature as a seperate class file">
       <option name="closed" value="true" />
-      <created>1741331797647</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
+      <created>1741714809848</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
       <option name="project" value="LOCAL" />
-      <updated>1741331797647</updated>
+      <updated>1741714809848</updated>
     </task>
-    <task id="LOCAL-00003" summary="Added feature to take user input">
+    <task id="LOCAL-00018" summary="revised the code based on comments and resolved the comments&#10;&#10;made the feature as a seperate class file">
       <option name="closed" value="true" />
-      <created>1741336984211</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
+      <created>1741714889475</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1741336984211</updated>
+      <updated>1741714889475</updated>
     </task>
-    <task id="LOCAL-00004" summary="Added feature to take user input">
+    <task id="LOCAL-00019" summary="revised the code based on comments and resolved the comments&#10;&#10;made the feature as a seperate class file&#10;made validations seperate in seperate methods">
       <option name="closed" value="true" />
-      <created>1741337308646</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
+      <created>1741798528435</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1741337308646</updated>
+      <updated>1741798528435</updated>
     </task>
-    <task id="LOCAL-00005" summary="Added feature to take user input">
+    <task id="LOCAL-00020" summary="file read&#10;file sort&#10;file write">
       <option name="closed" value="true" />
-      <created>1741340961644</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
+      <created>1741806159996</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1741340961644</updated>
+      <updated>1741806159996</updated>
     </task>
-    <task id="LOCAL-00006" summary="Added feature to take user input">
+    <task id="LOCAL-00021" summary="implemented all the required changes as comments">
       <option name="closed" value="true" />
-      <created>1741341661064</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
+      <created>1741869409826</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1741341661064</updated>
+      <updated>1741869409826</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00022" summary="implemented all the required changes as comments">
+      <option name="closed" value="true" />
+      <created>1741869965381</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1741869965381</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Implented file processing.&#10;all the files will be merged,sorted and will be written in a single log file">
+      <option name="closed" value="true" />
+      <created>1741928158444</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1741928158444</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Implented file processing.&#10;all the files will be merged,sorted and will be written in a single log file">
+      <option name="closed" value="true" />
+      <created>1741928622829</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1741928622829</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Implented file processing.&#10;all the files will be merged,sorted and will be written in a single log file">
+      <option name="closed" value="true" />
+      <created>1741928689597</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1741928689597</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Implented file processing.&#10;all the files will be merged,sorted and will be written in a single log file">
+      <option name="closed" value="true" />
+      <created>1741929616973</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1741929616973</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Added functionality to verify sortedFilePath">
+      <option name="closed" value="true" />
+      <created>1741945513292</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1741945513292</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Changed the sortedfile name pattern">
+      <option name="closed" value="true" />
+      <created>1741951881987</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1741951881987</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Changed the sortedfile name pattern">
+      <option name="closed" value="true" />
+      <created>1741956326461</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1741956326461</updated>
+    </task>
+    <task id="LOCAL-00030" summary="modified code according to comments">
+      <option name="closed" value="true" />
+      <created>1741973324687</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1741973324688</updated>
+    </task>
+    <task id="LOCAL-00031" summary="resolved logic issue in main">
+      <option name="closed" value="true" />
+      <created>1742055655561</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1742055655561</updated>
+    </task>
+    <task id="LOCAL-00032" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1742058363090</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1742058363090</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added boolean result for fetching result">
+      <option name="closed" value="true" />
+      <created>1742058575862</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1742058575862</updated>
+    </task>
+    <task id="LOCAL-00034" summary="audit initial commit">
+      <option name="closed" value="true" />
+      <created>1742111293374</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1742111293374</updated>
+    </task>
+    <task id="LOCAL-00035" summary="review ready">
+      <option name="closed" value="true" />
+      <created>1742141565177</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1742141565177</updated>
+    </task>
+    <task id="LOCAL-00036" summary="review ready">
+      <option name="closed" value="true" />
+      <created>1742141763762</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1742141763762</updated>
+    </task>
+    <task id="LOCAL-00037" summary="working in all senarios">
+      <option name="closed" value="true" />
+      <created>1742189228227</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1742189228227</updated>
+    </task>
+    <task id="LOCAL-00038" summary="changed the workFLow">
+      <option name="closed" value="true" />
+      <created>1742191402535</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1742191402535</updated>
+    </task>
+    <task id="LOCAL-00039" summary="changed the workFLow">
+      <option name="closed" value="true" />
+      <created>1742194110346</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1742194110346</updated>
+    </task>
+    <task id="LOCAL-00040" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1742194738413</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1742194738413</updated>
+    </task>
+    <task id="LOCAL-00041" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1742195190979</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1742195190979</updated>
+    </task>
+    <task id="LOCAL-00042" summary="initial commit">
+      <option name="closed" value="true" />
+      <created>1742201606745</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1742201606745</updated>
+    </task>
+    <task id="LOCAL-00043" summary="ready to review">
+      <option name="closed" value="true" />
+      <created>1742205152749</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1742205152749</updated>
+    </task>
+    <task id="LOCAL-00044" summary="ready to review">
+      <option name="closed" value="true" />
+      <created>1742205857735</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1742205857735</updated>
+    </task>
+    <task id="LOCAL-00045" summary="made changes according to comments">
+      <option name="closed" value="true" />
+      <created>1742206375489</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1742206375489</updated>
+    </task>
+    <task id="LOCAL-00046" summary="added feature to take path for sotring sorted file">
+      <option name="closed" value="true" />
+      <created>1742217343916</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1742217343916</updated>
+    </task>
+    <task id="LOCAL-00047" summary="added feature to take path for sotring sorted file and validate that path">
+      <option name="closed" value="true" />
+      <created>1742230518340</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1742230518340</updated>
+    </task>
+    <task id="LOCAL-00048" summary="modifiying">
+      <option name="closed" value="true" />
+      <created>1742231063677</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1742231063677</updated>
+    </task>
+    <task id="LOCAL-00049" summary="modifiying">
+      <option name="closed" value="true" />
+      <created>1742231649425</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1742231649425</updated>
+    </task>
+    <task id="LOCAL-00050" summary="modifiying according to comments">
+      <option name="closed" value="true" />
+      <created>1742232078388</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1742232078388</updated>
+    </task>
+    <task id="LOCAL-00051" summary="ready for PR">
+      <option name="closed" value="true" />
+      <created>1742232615540</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1742232615540</updated>
+    </task>
+    <task id="LOCAL-00052" summary="ready for PR">
+      <option name="closed" value="true" />
+      <created>1742234380612</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1742234380612</updated>
+    </task>
+    <task id="LOCAL-00053" summary="ready for PR">
+      <option name="closed" value="true" />
+      <created>1742271738216</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1742271738217</updated>
+    </task>
+    <task id="LOCAL-00054" summary="ready for PR">
+      <option name="closed" value="true" />
+      <created>1742272056985</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1742272056985</updated>
+    </task>
+    <task id="LOCAL-00055" summary="ready for PR">
+      <option name="closed" value="true" />
+      <created>1742276400697</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1742276400697</updated>
+    </task>
+    <task id="LOCAL-00056" summary="ready for merge">
+      <option name="closed" value="true" />
+      <created>1742276488043</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1742276488043</updated>
+    </task>
+    <task id="LOCAL-00057" summary="ready for merge">
+      <option name="closed" value="true" />
+      <created>1742291278950</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1742291278950</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Ready for review">
+      <option name="closed" value="true" />
+      <created>1742359248271</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1742359248272</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Ready for review">
+      <option name="closed" value="true" />
+      <created>1742369981948</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1742369981949</updated>
+    </task>
+    <task id="LOCAL-00060" summary="Made changes according to the comments">
+      <option name="closed" value="true" />
+      <created>1742403265697</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1742403265697</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Made changes according to the comments">
+      <option name="closed" value="true" />
+      <created>1742442106880</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1742442106880</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Made changes according to the comments">
+      <option name="closed" value="true" />
+      <created>1742449186362</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1742449186362</updated>
+    </task>
+    <task id="LOCAL-00063" summary="Implemented util class">
+      <option name="closed" value="true" />
+      <created>1742468322285</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1742468322285</updated>
+    </task>
+    <task id="LOCAL-00064" summary="added documentations">
+      <option name="closed" value="true" />
+      <created>1742470000223</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1742470000223</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="RECENT_FILTERS">
@@ -154,8 +722,45 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit" />
-    <MESSAGE value="Added feature to take user input" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added feature to take user input" />
+    <MESSAGE value="file read&#10;file sort&#10;file write" />
+    <MESSAGE value="implemented all the required changes as comments" />
+    <MESSAGE value="Implented file processing.&#10;all the files will be merged,sorted and will be written in a single log file" />
+    <MESSAGE value="Added functionality to verify sortedFilePath" />
+    <MESSAGE value="Changed the sortedfile name pattern" />
+    <MESSAGE value="modified code according to comments" />
+    <MESSAGE value="resolved logic issue in main" />
+    <MESSAGE value="added boolean result for fetching result" />
+    <MESSAGE value="audit initial commit" />
+    <MESSAGE value="review ready" />
+    <MESSAGE value="working in all senarios" />
+    <MESSAGE value="changed the workFLow" />
+    <MESSAGE value="initial commit" />
+    <MESSAGE value="ready to review" />
+    <MESSAGE value="made changes according to comments" />
+    <MESSAGE value="added feature to take path for sotring sorted file" />
+    <MESSAGE value="added feature to take path for sotring sorted file and validate that path" />
+    <MESSAGE value="modifiying" />
+    <MESSAGE value="modifiying according to comments" />
+    <MESSAGE value="ready for PR" />
+    <MESSAGE value="ready for merge" />
+    <MESSAGE value="Ready for review" />
+    <MESSAGE value="Made changes according to the comments" />
+    <MESSAGE value="Implemented util class" />
+    <MESSAGE value="added documentations" />
+    <option name="LAST_COMMIT_MESSAGE" value="added documentations" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.io.FileNotFoundException" package="java.io" />
+          <option name="timeStamp" value="3" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

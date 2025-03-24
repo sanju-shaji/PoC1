@@ -1,6 +1,7 @@
 package tool.logaggregator.filehandler;
 
 import tool.logaggregator.constants.LogAggregatorToolConstants;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.Reader;
@@ -31,7 +32,7 @@ public class LogReader {
                 }
             }
         } catch (Exception exception) {
-            throw new RuntimeException(exception);
+            System.out.println(exception.getMessage());
         }
         return fileData;
     }
