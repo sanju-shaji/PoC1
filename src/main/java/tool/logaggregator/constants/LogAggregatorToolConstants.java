@@ -23,7 +23,7 @@ public class LogAggregatorToolConstants {
     public static final String PROCESSING = "Processing...";
     public static final String PROCESS_SUCCESS = "Success";
     public static final String PROCESS_FAILED = "Failed";
-    public static final String PROPERTIES_FILE_PATH = "src/main/resources/application.properties";
+    public static final String PROPERTIES_FILE_PATH = "D:/Internship/PoC1/src/main/resources/application.properties";
     public static final String REGEX_DATETIME_PATTERN_YMD = "(\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}:\\d{3})";
     public static final String REGEX_DATETIME_PATTERN_MDY = "(\\d{2}/\\d{2}/\\d{4} \\d{2}:\\d{2}:\\d{2}\\.\\d{3})";
     public static final String SIMPLE_DATE_TIME_PATTERN_MDY = "MM/dd/yyyy HH:mm:ss.SSS";
