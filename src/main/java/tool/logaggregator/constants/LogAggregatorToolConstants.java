@@ -6,9 +6,6 @@ package tool.logaggregator.constants;
 public class LogAggregatorToolConstants {
     public static final String ADD_AUDIT_QUERY = "INSERT INTO audit(folder_path, file_count, file_names, operation_datetime, result, output_file_name, error_message) VALUES(?, ?, ?, NOW(), ?, ?, ?)";
     public static final String ARRAY_TO_STRING_DELIMITER = ",  ";
-    public static final String DB_URL = "mysql.db.connectionString";
-    public static final String DB_USERNAME = "mysql.db.userName";
-    public static final String DB_PASSWORD = "mysql.db.password";
     public static final String EMPTY_FOLDER = "Folder is empty";
     public static final String EMPTY_LOGFILE = "log files are empty or no log data present in logfile";
     public static final String FILE_PROCESSING_FAILED = "File Processing failed";
@@ -23,7 +20,6 @@ public class LogAggregatorToolConstants {
     public static final String PROCESSING = "Processing...";
     public static final String PROCESS_SUCCESS = "Success";
     public static final String PROCESS_FAILED = "Failed";
-    public static final String PROPERTIES_FILE_PATH = "src/main/resources/application.properties";
     public static final String REGEX_DATETIME_PATTERN_YMD = "(\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}:\\d{3})";
     public static final String REGEX_DATETIME_PATTERN_MDY = "(\\d{2}/\\d{2}/\\d{4} \\d{2}:\\d{2}:\\d{2}\\.\\d{3})";
     public static final String SIMPLE_DATE_TIME_PATTERN_MDY = "MM/dd/yyyy HH:mm:ss.SSS";

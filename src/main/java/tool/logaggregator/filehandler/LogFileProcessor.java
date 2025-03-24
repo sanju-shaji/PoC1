@@ -35,9 +35,9 @@ public class LogFileProcessor {
             LogaggregatortoolAudit logaggregatortoolAudit = new LogaggregatortoolAudit();
             LogAggregatorToolUtil logAggregatorToolUtil = new LogAggregatorToolUtil();
             if (isFileProcessed) {
-                String sortedFilePath = logFileWriter.sortedLogName;
+                String sortedLogName = logFileWriter.sortedLogName;
                 auditData = logAggregatorToolUtil.buildAuditData(userFilePath, logFileCount, logFileNames,
-                        LogAggregatorToolConstants.PROCESS_SUCCESS, sortedFilePath, null);
+                        LogAggregatorToolConstants.PROCESS_SUCCESS, sortedLogName, null);
                 logaggregatortoolAudit.addAudit(auditData);
                 System.out.println(LogAggregatorToolConstants.FILE_PROCESSING_SUCCESS + LogAggregatorToolConstants.NEW_LINE + LogAggregatorToolConstants.SORTED_FILE_PATH + logFileWriter.outputFilePath);
             } else {
