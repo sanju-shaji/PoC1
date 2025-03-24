@@ -13,7 +13,7 @@ import java.util.Scanner;
  * class for writing the sorted logdata to a single log file
  */
 public class LogWriter {
-    public String outputFilePath;
+    String outputFilePath;
     String outputFolder;
     String currentDateTime = new SimpleDateFormat(LogAggregatorToolConstants.FILE_NAME_DATETIME_FORMAT).format(new Date());
     public String sortedLogName = LogAggregatorToolConstants.SORTED_FILE_NAME + currentDateTime + LogAggregatorToolConstants.LOG_EXTENSION;
